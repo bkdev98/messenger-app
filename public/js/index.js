@@ -20,13 +20,6 @@ socket.on('connect', function () {
     chat.$chatHistoryList.append(templateResponse(contextResponse));
     chat.scrollToBottom();
 
-    // var contextResponse = {
-    //   response: message.content,
-    //   time: message.createdAt
-    // };
-
-    // chat.$chatHistoryList.append('<li><div class="message-data"><span class="message-data-name"><i class="fa fa-circle online"></i>hello</span><span class="message-data-time">' + contextResponse.time + '</span></div><div class="message my-message">' + contextResponse.response + '</div></li>');
-    // chat.scrollToBottom();
     console.log(contextResponse);
   });
 });
@@ -85,9 +78,6 @@ var chat = {
   },
   scrollToBottom: function () {
     this.$chatHistory.scrollTop(this.$chatHistory[0].scrollHeight);
-  },
-  getRandomItem: function (arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
   }
 };
 
